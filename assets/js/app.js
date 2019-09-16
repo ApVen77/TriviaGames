@@ -33,7 +33,7 @@ function childStars() {
         },
 
         picture5: {
-            //Haley Joel Osmond
+            //Jonathan Lipnicki
             imageURL:
                 "https://www.thesun.co.uk/wp-content/uploads/2016/12/nintchdbpict000287158449.jpg"
         },
@@ -66,83 +66,92 @@ function childStars() {
         }
 
     };
+}
+//Trivia questions and responses and image u
+var quizQuestions = [
+    {
+        question: "Who is this former child star?",
+        choices: ["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
+        correctAnswer: "a.Jaleel White",
+        imageURL: "<img src= 'https://pmctvline2.files.wordpress.com/2018/08/jaleel-white.jpg?w=620'/>"
+
+    },
+    {
+        question: "Who is this former child star?",
+        choices: ["a.Jaleel White", "b. Haley Joel Osmond", "c.Angus Jones", "d. Macaulay Culkin"],
+        correctAnswer: "b. Haley Joel Osmond",
+        imageURL: "<img src= 'https://cdn.images.express.co.uk/img/dynamic/36/590x/secondary/HALEY-JOEL-OSMENT-1300753.jpg'/>"
+    },
+    {
+        question: "Who is this former child star?",
+        choices: ["a.Dakota Fanning", "b. Lark Voorhies", "c.Ashley Olsen", "d. Mara Wilson"],
+        correctAnswer: "d.Mara Wilson",
+        imageURL: "<img src='https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/10/10/13/exley-ep1725-ldww-mara-0061.jpg?w968h681'/>"
+    },
+
+    {
+        question: "Who is this former child star?",
+        choices: ["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
+        correctAnswer: "a.Angus Jones",
+        imageURL: "<img src='https://timedotcom.files.wordpress.com/2019/08/macaulay-culkin-home-alone-photo.jpg?quality=85&w=594&h=450&crop=1'/>"
     }
-    //Trivia questions and responses and image u
-    var quizQuestions = [
-    {
+
+ {
         question: "Who is this former child star?",
-        choices: ["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        correctAnswer: "a.Jaleel White"
-        
-    },
-    {
-        question: "Who is this former child star?",
-        choices: ["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        correctAnswer: "a.Jaleel White"
-    },
-    {
-        question: "Who is this former child star?",
-        choices: ["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        correctAnswer: "a.Dakota Fanning"
-    },
+        choices: ["a.Jonathan Lipnicki", "b. Orlando Bloom", "c.Angus Jones", "d. Jonathan Taylor Thomas"],
+        correctAnswer: "a.Jonathan Lipnicki",
+        imageURL: "<img src= 'https://www.thesun.co.uk/wp-content/uploads/2016/12/nintchdbpict000287158449.jpg'/>"
+    }
+    // question: "Who is this former child star?",
+    // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
+    // correctAnswer: "a.Jaleel White" 
 
-        {question: "Who is this former child star?",
-        choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        correctAnswer: "a.Angus Jones" }
+    // question: "Who is this former child star?",
+    // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
+    // correctAnswer: "a.Jaleel White" 
 
-        // question: "Who is this former child star?",
-        // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        // correctAnswer: "a.Jaleel White" 
+    // question: "Who is this former child star?",
+    // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
+    // correctAnswer: "a.Jaleel White" 
 
-        // question: "Who is this former child star?",
-        // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        // correctAnswer: "a.Jaleel White" 
+    // question: "Who is this former child star?",
+    // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
+    // correctAnswer: "a.Jaleel White" 
 
-        // question: "Who is this former child star?",
-        // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        // correctAnswer: "a.Jaleel White" 
-
-        // question: "Who is this former child star?",
-        // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        // correctAnswer: "a.Jaleel White" 
-
-        // question: "Who is this former child star?",
-        // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        // correctAnswer: "a.Jaleel White" 
-
-        // question: "Who is this former child star?",
-        // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
-        // correctAnswer: "a.Jaleel White" 
+    // question: "Who is this former child star?",
+    // choices:["a.Jaleel White", "b. Orlando Bloom", "c.Angus Jones", "d. Mara Wilson"],
+    // correctAnswer: "a.Jaleel White" 
 
 
 
-    
+
 
 ];
 
 //switch to the next question//
 function nextQuestion() {
-currentQuestion++;
-launchQuestions();
+    currentQuestion++;
+    launchQuestions();
 }
 
 //setting the timer to count down//
-function decrement(){
+function decrement() {
     counter--;
-    if (counter===0) {
+    if (counter === 0) {
         outOfTime
     }
 }
 
 //When timer reaches zero//
 function outOfTime() {
-    clearInterval(timer); 
-    lost++; 
+    clearInterval(timer);
+    lost++;
 }
-function winnerWinner(){
-if(question===choices) {
-    //?????????////
-}
+//
+function winnerWinner() {
+    if (question === choices) {
+        //?????????////
+    }
 
 }
 
@@ -150,17 +159,18 @@ if(question===choices) {
 //load questions//
 function launchQuestions() {
     counter = 20;
-    timer = setInterval(decrement,1000); 
+    timer = setInterval(decrement, 1000);
 
     var question = quizQuestions[currentQuestion].question;
     var choices = quizQuestions[currentQuestion].choices;
-    // var childStars=quizQuestions[currentQuestion].picture1;
+    var childStars = quizQuestions[currentQuestion].imageURL;
 
     $("#time").html('Timer: ' + counter);
+    $("#photo").append(childStars);
     $("#game").html('<h2>' + question + '</h2>');
     $(launchChoices(choices)
 
-    //******How can I add image? */
+        //******How can I add image? */
 
     );
 }
@@ -171,7 +181,7 @@ function launchQuestions() {
 //      for (var i=0; i < choices.length; i++) {
 //          result += '<p class='choices "data-answer=" ${choices[i]}">${choices[i]}</p>;
 //      }
-     
+
 //      return result; 
 // }
 
