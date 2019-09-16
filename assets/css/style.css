@@ -1,9 +1,23 @@
-body {
-    background-color: aqua; 
-    
-        background-image: url("https://s7.orientaltrading.com/is/image/OrientalTrading/13901887?$PDP_VIEWER_IMAGE$");  
-             float: left; 
+    body {
+    background-image: url("https://s7.orientaltrading.com/is/image/OrientalTrading/13901887?$PDP_VIEWER_IMAGE$");   
 }
+
+    h2 {
+    text-align: center; 
+    
+    }
+
+    .jumbotron { 
+    
+    background-color: aqua; 
+
+            }
+
+        .choice {
+            border: 2px dotted hotpink; 
+            padding: 15px;
+            border-radius: 3px; 
+        }
 
         
     
