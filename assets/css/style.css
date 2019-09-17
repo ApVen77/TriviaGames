@@ -19,5 +19,6 @@
             border-radius: 3px; 
         }
 
-        
-    
+       #button {
+           padding: 10px;
+       }
