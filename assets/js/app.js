@@ -2,7 +2,6 @@ $(document).ready(function () {
 
     //gloabal variables
     var counter = 10;
-    var launchQuestions=" ";
     var currentQuestion = 0;
     var score = 0;
     var timer;
@@ -92,7 +91,7 @@ $(document).ready(function () {
             question: "Who is this former child star?",
             choices: ["a.Dakota Fanning", "b. Lark Voorhies", "c.Ashley Olsen", "d. Mara Wilson"],
             correctAnswer: "d. Mara Wilson",
-            imageURL: "<img src='https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/10/10/13/exley-ep1725-ldww-mara-0061.jpg?quality=85&w=594&h=450&crop=1'/>"
+            imageURL: "<img src='https://media.npr.org/assets/img/2016/09/09/mara-wilson_custom-60d10cd01539d12c7647d757ca6820dd7a5d8531-s800-c85.jpg'/>"
         },
 
         {
@@ -106,7 +105,7 @@ $(document).ready(function () {
             question: "Who is this former child star?",
             choices: ["a.Jonathan Lipnicki", "b. Orlando Bloom", "c.Angus Jones", "d. Jonathan Taylor Thomas"],
             correctAnswer: "a.Jonathan Lipnicki",
-            imageURL: "<img src= 'https://www.thesun.co.uk/wp-content/uploads/2016/12/nintchdbpict000287158449.jpg'/>"
+            imageURL: "<img src= 'https://i2-prod.mirror.co.uk/incoming/article9451005.ece/ALTERNATES/s615b/2016-Chiller-Theater-Expo.jpg'/>"
         },
         {
             question: "Who is this former child star?",
@@ -130,7 +129,7 @@ $(document).ready(function () {
         },
         {
             question: "Who is this former child star?",
-            choices: ["a.", "b. Mary-Kate Olsen", "c.Victoria Justice", "d. Dakota Fanning"],
+            choices: ["a. Elle Fanning", "b. Mary-Kate Olsen", "c.Victoria Justice", "d. Dakota Fanning"],
             correctAnswer: "d. Dakota Fanning",
             imageURL: "<img src= 'https://www.indiewire.com/wp-content/uploads/2015/04/dakota-fanning-by-daniel-bergeron.jpg?w=780'/>"
         }
@@ -215,34 +214,31 @@ $(document).ready(function () {
 
         if ($(event.target).attr("data-name") == quizQuestions[currentQuestion].correctAnswer) {
             answerCorrectly
-                $("#message").append("<h3> The Correct Answer is: " + quizQuestions[currentQuestion].correctAnswer);
-            
-            
+                $("#message").append("<h3> The Correct Answer is: " + quizQuestions[currentQuestion].correctAnswer); 
         }
         else {
             answerIncorrectly
             $("#message").append("<h3> The Correct Answer is: " + quizQuestions[currentQuestion].correctAnswer);
             }
         }
-}) 
-    
-    function answerCorrectly() {
-        clearInterval(timer);
-        wins++;
-        $("#game").html("<h2 Correct !</h2>");
-        $("#game").append("Correct"+ quizQuestions[currentQuestion].correctImage);
-        if (currentQuestion == quizQuestions.length - 1) {
-            setTimeout(showResults, 1000);
+        
+        function answerCorrectly() {
+            clearInterval(timer);
+            wins++;
 
+            $("#game").append("Correct"+ quizQuestions[currentQuestion].correctAnswer);
+            if (currentQuestion == quizQuestions.length - 1) {
+                setTimeout(showResults, 2 * 1000);
+                
+            }
+            // continue with the next question
+            else {
+                setTimeout(nextQuestion, 2 * 1000);
+            }
+            
         }
-        // continue with the next question
-        else {
-            setTimeout(nextQuestion, 1000);
-        }
-
-    }
-
-  
-
-    launchQuestions();
-
+        
+        
+        
+        launchQuestions();
+    }) 
