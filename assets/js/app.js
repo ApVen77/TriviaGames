@@ -140,7 +140,7 @@ $(document).ready(function () {
     //load questions//
     function launchQuestions(question) {
         counter = 10;
-        timer = setInterval(decrement, 2 * 1000);
+        timer = setInterval(decrement, 1000);
 
 
         var question = quizQuestions[currentQuestion].question;
@@ -157,15 +157,15 @@ $(document).ready(function () {
     }
 
       // load responses to questions//
-      function launchChoices (choices) {
-        var result= '';
-         for (var i=0; i < choices.length; i++) {
-             result += `<p class="choices" data-answer=>" ${choices[i]}">${choices[i]}</p>`; 
+    //   function launchChoices (choices) {
+    //     var result= '';
+    //      for (var i=0; i < choices.length; i++) {
+    //          result += `<p class="choices" data-answer=>" ${choices[i]}">${choices[i]}</p>`; 
              
-         }
+    //      }
 
-         return result; 
-    }
+    //      return result; 
+    // }
 
     //switch to the next question//
     function nextQuestion() {
@@ -206,24 +206,29 @@ $(document).ready(function () {
     }
 
     $(document).on("click", ".answer-button", function (e) {
+        // event.preventDefault();
         clearInterval(timer);
+        launchQuestions()
+        // launchChoices()
         clicked(e);
     })
     function clicked(e) {
         clearInterval(timer);
 
         if ($(event.target).attr("data-name") == quizQuestions[currentQuestion].correctAnswer) {
-            answerCorrectly
+            answerCorrectly()
                 $("#message").append("<h3> The Correct Answer is: " + quizQuestions[currentQuestion].correctAnswer); 
         }
         else {
-            answerIncorrectly
+            answerIncorrectly //doesn't exsist
             $("#message").append("<h3> The Correct Answer is: " + quizQuestions[currentQuestion].correctAnswer);
             }
         }
-        
+        //change function
+        //clicked function 
         function answerCorrectly() {
             clearInterval(timer);
+            nextQuestion()
             wins++;
 
             $("#game").append("Correct"+ quizQuestions[currentQuestion].correctAnswer);
