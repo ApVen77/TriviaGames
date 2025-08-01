@@ -27,15 +27,24 @@
 
 
         </div>
-        
-        
+
+
         <div class="jumbotron">
             <h2 id="time"></h2>
             <div id="photo"></div>
             <div id="game"></div>
             <div id="message"></div>
+            <div id="scoreboard" class="text-center d-none">
+                <h2>Game Over!</h2>
+                <div class="score-details">
+                    <p>Correct Answers: <span id="final-correct">0</span></p>
+                    <p>Incorrect Answers: <span id="final-incorrect">0</span></p>
+                    <p>Final Score: <span id="final-score">0</span></p>
+                </div>
+                <button class="btn btn-primary play-again">Play Again</button>
+            </div>
         </div>
-        
+
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

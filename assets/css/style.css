@@ -1,24 +1,66 @@
     body {
-    background-image: url("https://s7.orientaltrading.com/is/image/OrientalTrading/13901887?$PDP_VIEWER_IMAGE$");   
-}
-
-    h2 {
-    text-align: center; 
-    
+        background-image: url("https://s7.orientaltrading.com/is/image/OrientalTrading/13901887?$PDP_VIEWER_IMAGE$");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
-    .jumbotron { 
-    
-    background-color: aqua; 
+    h2 {
+        text-align: center;
 
-            }
+    }
 
-        .choice {
-            border: 2px dotted hotpink; 
-            padding: 15px;
-            border-radius: 3px; 
-        }
+    .jumbotron {
 
-       #button {
-           padding: 10px;
-       }
+        background-color: aqua;
+        margin-top: 3%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+    }
+
+    .choice {
+        border: 2px dotted hotpink;
+        padding: 15px;
+        border-radius: 3px;
+    }
+
+    #button {
+        padding: 10px;
+    }
+
+    #message {
+        font-size: 25px;
+        color: pink;
+
+    }
+
+    img {
+        height: 250px;
+        width: auto;
+        border: outset hotpink 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-left: 300px;
+    }
+
+    #game {
+        color: black;
+        font-family: cursive;
+    }
+
+    #scoreboard {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .score-details {
+        font-size: 1.2em;
+        margin: 20px 0;
+    }
+
+    .d-none {
+        display: none;
+    }
